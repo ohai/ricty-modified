@@ -25,12 +25,12 @@ module FontGenerator
     # ff.Scale(70, 100)
     # ff.SetWidth(500)
     # ff.CenterInWidth
-    east_asian_ambiguous_characters.each do |n|
-      ff.Select("0u%04x" % n)
-      ff.Scale(70, 100)
-      ff.SetWidth(500)
-      ff.CenterInWidth
-    end
+    # east_asian_ambiguous_characters.each do |n|
+    #   ff.Select("0u%04x" % n)
+    #   ff.Scale(70, 100)
+    #   ff.SetWidth(500)
+    #   ff.CenterInWidth
+    # end
     
     ff.cmd("RoundToInt")
     ff.cmd("RemoveOverlap")
