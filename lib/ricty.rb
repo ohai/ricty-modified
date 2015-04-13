@@ -10,10 +10,11 @@ module FontGenerator
     fontweight = 400
     
     ff = FontForge.new
-    
+    ff.add(copyright)
     ff.New
     ff.Reencode(q("unicode"))
-    ff.SetFontNames(q("RictyM-Regular"), q("RictyM"), q("RictyM Regular"), q("Regular"), q(copyright), q(version))
+    ff.SetFontNames(q("RictyM-Regular"), q("RictyM"), q("RictyM Regular"), q("Regular"),
+                    "copyright", q(version))
     
     ff.SetTTFName(0x409, 2, q("Regular"))
     ff.SetTTFName(0x409, 3, %Q["FontForge 2.0 : " + $fullname + " : " + Strftime("%d-%m-%Y", 0)])
@@ -88,14 +89,19 @@ module FontGenerator
     return ff
   end
 
+  # Return copyright string
+  # This is needed because fontforge doesn't accept
+  # "long" string.
   def copyright
-    return "Copyright (c) 2011-2014 Yasunori Yusa\n etc"
-    # "Copyright (c) 2006 Raph Levien\n" +
-    #    "Copyright (c) 2006-2013 itouhiro\n" +
-    #    "Copyright (c) 2002-2013 M+ FONTS PROJECT\n" +
-    #    "Copyright (c) 2003-2011 Information-technology Promotion Agency, Japan (IPA)\n" +
-    #    "SIL Open Font License Version 1.1 (http://scripts.sil.org/ofl)\n" +
-    #    "IPA Font License Agreement v1.0 (http://ipafont.ipa.go.jp/ipa_font_license_v1.html)" 
+<<'EOS'
+copyright         = "Copyright (c) 2011-2014 Yasunori Yusa\n" \
+                  + "Copyright (c) 2006 Raph Levien\n" \
+                  + "Copyright (c) 2006-2013 itouhiro\n" \
+                  + "Copyright (c) 2002-2013 M+ FONTS PROJECT\n" \
+                  + "Copyright (c) 2003-2011 Information-technology Promotion Agency, Japan (IPA)\n" \
+                  + "SIL Open Font License Version 1.1 (http://scripts.sil.org/ofl)\n" \
+                  + "IPA Font License Agreement v1.0 (http://ipafont.ipa.go.jp/ipa_font_license_v1.html)"
+EOS
   end
 
   def version

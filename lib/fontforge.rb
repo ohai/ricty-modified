@@ -6,6 +6,10 @@ module FontGenerator
     end
     
     attr_reader :output
+
+    def add(string)
+      @output << string
+    end
     
     def cmd(command, *args)
       @output << "#{command}(#{args.map(&method(:quote)).join(",")})\n"
