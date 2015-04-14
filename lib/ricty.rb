@@ -44,7 +44,6 @@ module FontGenerator
     
     ff.MergeFonts(q("run/modified_inconsolata.sfd"))
     ff.MergeFonts(q("run/migu-1m.sfd"))
-    ff.MergeFonts(q("run/DejaVuSansMono.sfd"))
 
     # Zenkaku space
     ff.Select("0u2610"); ff.Copy(); ff.Select("0u3000"); ff.Paste()
