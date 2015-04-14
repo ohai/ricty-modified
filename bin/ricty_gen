@@ -3,7 +3,6 @@
 require_relative "../lib/inconsolata"
 require_relative "../lib/migu1m"
 require_relative "../lib/dejavu_sans_mono"
-require_relative "../lib/symbola"
 require_relative "../lib/ricty.rb"
 require 'fileutils'
 
@@ -12,11 +11,9 @@ FileUtils.mkdir_p("run")
 FontGenerator.inconsolata.save("run/inconsolata.pe")
 FontGenerator.dejavu_sans_mono.save("run/dejavu_sans_mono.pe")
 FontGenerator.migu1m.save("run/migu1m.pe")
-FontGenerator.ricty(true).save("run/ricty.pe")
-FontGenerator.symbola.save("run/symbola.pe")
+FontGenerator.ricty.save("run/ricty.pe")
 
 system("fontforge -script run/inconsolata.pe")
 system("fontforge -script run/migu1m.pe")
-#system("fontforge -script run/dejavu_sans_mono.pe")
-system("fontforge -script run/symbola.pe")
+system("fontforge -script run/dejavu_sans_mono.pe")
 system("fontforge -script run/ricty.pe")

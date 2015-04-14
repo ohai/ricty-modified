@@ -43,12 +43,7 @@ module FontGenerator
       SetWidth(500)
       CenterInWidth()
     end
-
-    def clear(code)
-      Select("0u%04x" % code)
-      Clear()
-    end
-    
+      
     ["Open", "ScaleToEm", "Print", "Select", "Clear", "SelectWorthOutputting", "Save","Close",
      "ClearInstrs", "UnlinkReference", "SetWidth", "Scale", "Move",
      "New", "Reencode", "SetFontNames", "SetTTFName", "SetOS2Value", "SetPanose",

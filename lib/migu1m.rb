@@ -31,8 +31,7 @@ module FontGenerator
     #   ff.SetWidth(500)
     #   ff.CenterInWidth
     # end
-    #greek_ambiguous.each{|c| ff.half_nize(c, 80) }
-    greek.each{|c| ff.clear(c) }
+    greek_ambiguous.each{|c| ff.half_nize(c, 80) }
     cyrillic_ambiguous.each{|c| ff.half_nize(c, 80) }
     roman_number_ambiguous.each{|c| ff.half_nize(c, 70) }
     symbol_ambiguous.each{|c| ff.half_nize(c, 70) }
