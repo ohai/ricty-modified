@@ -3,17 +3,17 @@ require_relative 'find_fontfile'
 
 module FontGenerator
   module_function
-  def ricty
+  def ricty(debug=false)
     ascent = 835
     descent = 215
     panoseweight = 5
     fontweight = 400
-    
+    name = debug ? "RictyMDBG" : "RictyM" 
     ff = FontForge.new
     ff.add(copyright)
     ff.New
     ff.Reencode(q("unicode"))
-    ff.SetFontNames(q("RictyM-Regular"), q("RictyM"), q("RictyM Regular"), q("Regular"),
+    ff.SetFontNames(q("#{name}-Regular"), q(name), q("#{name} Regular"), q("Regular"),
                     "copyright", q(version))
     
     ff.SetTTFName(0x409, 2, q("Regular"))
@@ -44,7 +44,8 @@ module FontGenerator
     
     ff.MergeFonts(q("run/modified_inconsolata.sfd"))
     ff.MergeFonts(q("run/migu-1m.sfd"))
-    ff.MergeFonts(q("run/DejaVuSansMono.sfd"))
+    ff.MergeFonts(q("run/Symbola605.sfd"))
+    #ff.MergeFonts(q("run/DejaVuSansMono.sfd"))
 
     # Zenkaku space
     ff.Select("0u2610"); ff.Copy(); ff.Select("0u3000"); ff.Paste()
@@ -85,7 +86,7 @@ module FontGenerator
     ff.SelectWorthOutputting()
     ff.RoundToInt(); ff.RemoveOverlap(); ff.RoundToInt()
     
-    ff.Generate(q("RictyM-Regular.ttf"), q(""), 0x84)
+    ff.Generate(q("#{name}-Regular.ttf"), q(""), 0x84)
     ff.Close
     return ff
   end
