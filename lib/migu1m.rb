@@ -35,6 +35,7 @@ module FontGenerator
     cyrillic_ambiguous.each{|c| ff.half_nize(c, 80) }
     roman_number_ambiguous.each{|c| ff.half_nize(c, 70) }
     symbol_ambiguous.each{|c| ff.half_nize(c, 70) }
+    ff.half_nize(0x2202, 80) # partial differential
     
     ff.cmd("RoundToInt")
     ff.cmd("RemoveOverlap")
