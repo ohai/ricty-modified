@@ -31,8 +31,8 @@ module FontGenerator
     #   ff.SetWidth(500)
     #   ff.CenterInWidth
     # end
-    greek_ambiguous.each{|c| ff.half_nize(c, 70) }
-    cyrillic_ambiguous.each{|c| ff.half_nize(c, 70) }
+    greek_ambiguous.each{|c| ff.half_nize(c, 80) }
+    cyrillic_ambiguous.each{|c| ff.half_nize(c, 80) }
     roman_number_ambiguous.each{|c| ff.half_nize(c, 70) }
     symbol_ambiguous.each{|c| ff.half_nize(c, 70) }
     
@@ -41,7 +41,7 @@ module FontGenerator
     ff.cmd("RoundToInt")
     ff.Save(q("run/migu-1m.sfd"))
     ff.Close
-
+    
     return ff
   end
 end
