@@ -4,12 +4,18 @@ require_relative "../lib/inconsolata"
 require_relative "../lib/migu1m"
 require_relative "../lib/ricty.rb"
 require 'fileutils'
+require 'optparse'
+
+debug = false
+opts = OptionParser.new
+opts.on("-d", "Debug option"){ debug = true }
+opts.parse!(ARGV)
 
 FileUtils.mkdir_p("run")
 
 FontGenerator.inconsolata.save("run/inconsolata.pe")
 FontGenerator.migu1m.save("run/migu1m.pe")
-FontGenerator.ricty.save("run/ricty.pe")
+FontGenerator.ricty(debug).save("run/ricty.pe")
 
 system("fontforge -script run/inconsolata.pe")
 system("fontforge -script run/migu1m.pe")
