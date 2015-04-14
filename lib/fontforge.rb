@@ -36,7 +36,14 @@ module FontGenerator
       ClearInstrs()
       UnlinkReference()
     end
-    
+
+    def half_nize(code, scale_width)
+      Select("0u%04x" % code)
+      Scale(scale_width, 100)
+      SetWidth(500)
+      CenterInWidth()
+    end
+      
     ["Open", "ScaleToEm", "Print", "Select", "Clear", "SelectWorthOutputting", "Save","Close",
      "ClearInstrs", "UnlinkReference", "SetWidth", "Scale", "Move",
      "New", "Reencode", "SetFontNames", "SetTTFName", "SetOS2Value", "SetPanose",

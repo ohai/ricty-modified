@@ -31,6 +31,10 @@ module FontGenerator
     #   ff.SetWidth(500)
     #   ff.CenterInWidth
     # end
+    greek_ambiguous.each{|c| ff.half_nize(c, 70) }
+    cyrillic_ambiguous.each{|c| ff.half_nize(c, 70) }
+    roman_number_ambiguous.each{|c| ff.half_nize(c, 70) }
+    symbol_ambiguous.each{|c| ff.half_nize(c, 70) }
     
     ff.cmd("RoundToInt")
     ff.cmd("RemoveOverlap")

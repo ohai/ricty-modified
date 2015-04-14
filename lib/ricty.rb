@@ -43,8 +43,8 @@ module FontGenerator
     ff.SetPanose([2, 11, panoseweight, 9, 2, 2, 3, 2, 2, 7])
     
     ff.MergeFonts(q("run/modified_inconsolata.sfd"))
-    ff.MergeFonts(q("run/DejaVuSansMono.sfd"))
     ff.MergeFonts(q("run/migu-1m.sfd"))
+    ff.MergeFonts(q("run/DejaVuSansMono.sfd"))
 
     # Zenkaku space
     ff.Select("0u2610"); ff.Copy(); ff.Select("0u3000"); ff.Paste()
