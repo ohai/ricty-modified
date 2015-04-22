@@ -50,13 +50,13 @@ http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&item_id=OFL&_sc=1
 を参照してください。
 
 # Copyright
-Copyright (c) 2011-2014 Yasunori Yusa
-Copyright (c) 2006 Raph Levien
-Copyright (c) 2006-2013 itouhiro
-Copyright (c) 2002-2013 M+ FONTS PROJECT
-Copyright (c) 2003-2011 Information-technology Promotion Agency, Japan (IPA)
-SIL Open Font License Version 1.1 (http://scripts.sil.org/ofl)
-IPA Font License Agreement v1.0 (http://ipafont.ipa.go.jp/ipa_font_license_v1.html)
+    Copyright (c) 2011-2014 Yasunori Yusa
+    Copyright (c) 2006 Raph Levien
+    Copyright (c) 2006-2013 itouhiro
+    Copyright (c) 2002-2013 M+ FONTS PROJECT
+    Copyright (c) 2003-2011 Information-technology Promotion Agency, Japan (IPA)
+    SIL Open Font License Version 1.1 (http://scripts.sil.org/ofl)
+    IPA Font License Agreement v1.0 (http://ipafont.ipa.go.jp/ipa_font_license_v1.html)
 
 # Author
 [大林一平](http://www.kmc.gr.jp/~ohai/)
