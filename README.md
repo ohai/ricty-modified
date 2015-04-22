@@ -35,6 +35,13 @@ Debian/Ubuntuの場合、Inconsolata は
 でカレントディレクトリに RictyM-Regular.ttf という
 True Type Font ファイルが生成されます。
 
+生成されたフォントは Debian の場合などは ~/.fonts/
+にコピーして、
+
+    fc-cache -vf
+
+とすると利用可能になります。
+
 # ライセンス
 生成スクリプトは 2-clause BSDL に従うものとします
 
