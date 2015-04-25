@@ -71,6 +71,14 @@ IPA Fontのライセンスの衝突のため、生成したフォントを配布
 できません。
 
 # Copyright
+スクリプト:
+
+    Copyright (c) 2015 Ippei Obayashi
+    Copyright (c) 2011-2014 Yasunori Yusa
+
+フォント:
+
+    Copyright (c) 2015 Ippei Obayashi
     Copyright (c) 2011-2014 Yasunori Yusa
     Copyright (c) 2006 Raph Levien
     Copyright (c) 2006-2013 itouhiro

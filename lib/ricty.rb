@@ -95,7 +95,8 @@ module FontGenerator
   # "long" string.
   def copyright
 <<'EOS'
-copyright         = "Copyright (c) 2011-2014 Yasunori Yusa\n" \
+copyright         = "Copyright (c) 2015 Ippei Obayashi\n" \
+                  + "Copyright (c) 2011-2014 Yasunori Yusa\n" \
                   + "Copyright (c) 2006 Raph Levien\n" \
                   + "Copyright (c) 2006-2013 itouhiro\n" \
                   + "Copyright (c) 2002-2013 M+ FONTS PROJECT\n" \
