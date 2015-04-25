@@ -26,7 +26,16 @@ Debian/Ubuntuの場合、Inconsolata は
     apt-get install fonts-inconsolata
 
 でインストールされます。 Migu 1M はダウンロードしてきたものを
-~/.fonts/ 以下に置いてください。
+~/.fonts/ 以下に置いてください。その他、
+
+* ruby
+* fontforge
+
+などが必要となります。Debianでは、
+
+    apt-get install fontforge ruby
+
+でインストールできます。
 
 その後、このディレクトリに移動して、
 
@@ -55,6 +64,11 @@ True Type Font ファイルが生成されます。
 http://www.levien.com/type/myfonts/inconsolata.html および
 http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&item_id=OFL&_sc=1
 を参照してください。
+
+
+Inconsolataのライセンス(SIL OPEN FONT LICENSE、OFL)と
+IPA Fontのライセンスの衝突のため、生成したフォントを配布することは
+できません。
 
 # Copyright
     Copyright (c) 2011-2014 Yasunori Yusa
