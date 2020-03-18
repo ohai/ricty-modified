@@ -1,6 +1,6 @@
 # Ricty modified
 
-これは[プログラミング用フォント Ricty](https://github.com/yascentur/Ricty)
+これは[プログラミング用フォント Ricty](https://rictyfonts.github.io/)
 を改造したものです。具体的には、UnicodeのEast Asian Widthの
 A (Ambiguous) の横幅をRictyの半分しています。
 
